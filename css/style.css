@@ -1,5 +1,5 @@
-*{
-    padding: 0%;
+* {
+    padding: 0;
     margin: 0;
     box-sizing: border-box;
     text-decoration: none;
@@ -7,114 +7,159 @@
     font-size: 14px;
 }
 
-body{
+body {
     width: 100%;
-    min-height: 100%;
-    background-color: rgb(243, 243, 243);
+    min-height: 100vh;
+    /*background-color: rgb(243, 243, 243);*/
+    background: url(../img/unnamed.png);
     margin: 0;
     padding: 0;
     display: flex;
     justify-content: center;
 }
 
-.instagram-wrapper{
+
+.wrapper {
     display: flex;
-    align-items: center; /*alinhamento vert*/
-    justify-content: start; /*alinhamento horiz a partir da esquerda*/
+    align-items: center;
+    justify-content: start;
     width: 60%;
     height: 100vh;
-
 }
-.phone{
+
+.phone {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 50%;
 }
-.phone img{
-    height: 50rem;
+
+.phone img {
+    height: 40rem;
 }
-.login-window{
+
+.continue {
     display: flex;
-    align-items: center;
-    justify-content: space-around;
+    align-items: center; 
+    justify-content: space-around; 
     flex-direction: column;
     width: 50%;
     min-height: 34rem;
 }
-.group{
+
+.group {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-direction: column; /*lembrando que o flex dir comulmn inverte o just content e align itens*/
-    background-color: white;
+    flex-direction: column;
+    background: inherit;
+    box-shadow: inset 0 0 0 3000px rgba(255,255,255,0.2);
     width: 100%;
     padding: 1.3rem 0;
-    border: 1px solid lightgray;
+    border-radius: 10px;
+    /*color: rgb(160, 160, 160);*/
+    color: black;
 }
 
-.group:nth-child(1){
+.group:nth-child(1) {
     min-height: 19rem;
 }
-.instagram-logo{
+
+.instagram-logo {
     height: 3rem;
 }
-.profile-photo{
-    display:flex;
-    align-items: center;
+
+.user-photo{
+    display: flex;
     justify-content: center;
+    align-items: center;
     border-radius: 50%;
     overflow: hidden;
 }
-.profile-photo img{
-height: 6rem;
+
+.user-photo img {
+    height: 6rem;
 }
 
-.login{
-    background-color: #0095F6;
+.login {
+    background-color: #0000EE;
+    color: #ffffff;
     padding: 8px;
-    color: white;
-    border-radius: 4px;
-}
-.logout{
-    color: #0095F6;
-    margin-top: 1rem;
-
-}
-.not-account{
-    color: grey;
-
-}
-.switch-account{
-    color: grey;
+    border-radius: 10px;
 }
 
-.blue-link{
-    color: #0095F6;
+.logout {
+    color: #0000EE;
+    
 }
-.download{
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      width: 100%;
-      padding: 1.3rem 0;
+/*
+.group:nth-child(2) p{
+    color: rgb(160, 160, 160);
+
 }
-.download-apps{
+*/
+.link-blue {
+    color: #0095f6;
+}
+
+.get-the-app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 1.3rem 0;
+}
+
+.stores {
     display: flex;
     width: 100%;
     justify-content: space-evenly;
     align-items: center;
     padding: 1rem;
 }
-.stores{
+
+.apps {
     height: 3rem;
     width: 10rem;
     background-size: cover;
 }
-.app-download:nth-child(1){
-    background-image: url(../img/apple-button.png);
+
+.apps:nth-child(1) {
+    background-image: url('../img/apple-button.png');
 }
-.app-download:nth-child(2){
-    background-image: url(../img/googleplay-button.png);
+
+.apps:nth-child(2) {
+    background-image: url('../img/googleplay-button.png');
+}
+
+/* media queries */
+
+
+@media (max-width: 1024px) {
+    .wrapper {
+        width: 90%;
+    }
+}
+
+@media (max-width: 650px) {
+    body {
+        background-color: #ffffff;
+    }
+
+    .wrapper {
+        width: 90%;
+    }
+
+    .phone {
+        display: none;
+    }
+
+    .continue {
+        width: 100%;
+    }
+    
+    .group {
+        border: 1px solid transparent;
+    
 }
